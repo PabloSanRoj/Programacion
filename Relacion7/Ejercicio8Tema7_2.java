@@ -39,7 +39,7 @@ public class Ejercicio8Tema7_2 {
     System.out.println(" ----------------\n 1 2 3 4 5 6 7 8 \n");
     
     // juego
-    System.out.println("Movimientos de un alfil tu abuela");
+    System.out.println("Movimientos de un alfil");
 
   }
 }
