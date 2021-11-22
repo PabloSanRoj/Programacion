@@ -7,25 +7,31 @@ aparecer como Felipe 1o y el segundo como Felipe 2o. */
 
 public class Ejercicio20Tema7_1 {
   public static void main(String[] args) {
-    
+
     int reyes;
 
     System.out.print("Introduzca el numero de reyes: ");
     reyes = Integer.parseInt(System.console().readLine());
 
-    String [] num = new String [reyes];
-    String [] rey = new String [reyes];
+    String[] num = new String[reyes];
+    String[] rey = new String[reyes];
 
-    for (int i = 0 ; i < reyes ; i++){
     System.out.println("Introduzca reyes y pulse INTRO: ");
-    num[i] = System.console().readLine();
-    rey[i] = num[i];
+    for (int i = 0; i < reyes; i++) {
+      num[i] = System.console().readLine();
+      rey[i] = num[i];
     }
-    for (int i = 0 ; i < reyes ; i++){
-      for (int j = 0 ; j < reyes ; j++){
-      if (!rey[j].equals(num[i])){
-        System.out.println(rey + "1º" );
-      }
+    for (int i = 0; i < reyes; i++) {
+      int posicion = 1;
+      if (i == 0) {
+        System.out.println(rey[i] + " " + posicion + "º");
+      } else {
+        for (int j = 0; j < i; j++) {
+          if (rey[i].equals(num[j]) && j != i) {
+            posicion++;
+          }
+        }
+        System.out.println(rey[i] + " " + posicion + "º");
       }
     }
   }
