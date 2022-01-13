@@ -1,4 +1,4 @@
-public class Ejercico25 {
+public class Ejercico25_2 {
     public static void main(String[] args) {
         
         int num;
