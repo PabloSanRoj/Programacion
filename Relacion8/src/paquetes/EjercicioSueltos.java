@@ -17,12 +17,12 @@ public class EjercicioSueltos {
       } else {
         for (int i = 0; i < aux; i++) {
           cadena = "|" + cadena;
-          
+
         }
         if (numDigi == 1) {
 
         } else {
-            cadena = "-" + cadena;
+          cadena = "-" + cadena;
         }
       }
 
@@ -37,61 +37,63 @@ public class EjercicioSueltos {
 
   public static int[] filtraPrimos(int n[]) {
 
-    int [] aux = new int [n.length];
-    int [] arrayPrimos;
+    int[] aux = new int[n.length];
+    int[] arrayPrimos;
 
     int contador = 0;
 
-    for (int j = 0; j < n.length ; j++){
-      
+    for (int j = 0; j < n.length; j++) {
+
       boolean num = Ejercicio1_14.esPrimo(n[j]);
 
-      if (num == true){
+      if (num == true) {
         aux[contador] = n[j];
         contador++;
       }
     }
 
-    if (contador == 0) arrayPrimos = new int[] { -1}; 
+    if (contador == 0)
+      arrayPrimos = new int[] { -1 };
     else {
 
       arrayPrimos = new int[contador];
-      
+
       for (int i = 0; i < contador; i++) {
         arrayPrimos[i] = aux[i];
       }
     }
-    
+
     return arrayPrimos;
   }
 
   public static int[] filtraCapicuas(int n[]) {
 
-    int [] aux = new int [n.length];
-    int [] arrayCapicuas;
+    int[] aux = new int[n.length];
+    int[] arrayCapicuas;
 
     int contador = 0;
 
-    for (int j = 0; j < n.length ; j++){
-      
+    for (int j = 0; j < n.length; j++) {
+
       boolean num = Ejercicio1_14.esCapicua(n[j]);
 
-      if (num == true){
+      if (num == true) {
         aux[contador] = n[j];
         contador++;
       }
     }
 
-    if (contador == 0) arrayCapicuas = new int[] { -1}; 
+    if (contador == 0)
+      arrayCapicuas = new int[] { -1 };
     else {
 
       arrayCapicuas = new int[contador];
-      
+
       for (int i = 0; i < contador; i++) {
         arrayCapicuas[i] = aux[i];
       }
     }
-    
+
     return arrayCapicuas;
   }
 
@@ -101,7 +103,7 @@ public class EjercicioSueltos {
 
     int numDigi = Ejercicio1_14.digitos(n);
 
-    String [] numeros = new String [10];
+    String[] numeros = new String[10];
 
     numeros[0] = "cero";
     numeros[1] = "uno";
@@ -118,14 +120,11 @@ public class EjercicioSueltos {
 
       int aux = Ejercicio1_14.quitaPorDelante(n, numDigi - 1);
 
-          
-            if (numDigi == 1){
-              cadena = numeros[aux] + cadena;
-            } else {
-            cadena = ", " + numeros[aux] + cadena;
-            }
-          
-      
+      if (numDigi == 1) {
+        cadena = numeros[aux] + cadena;
+      } else {
+        cadena = ", " + numeros[aux] + cadena;
+      }
 
       n = Ejercicio1_14.quitaPorDetras(n, 1);
       numDigi--;
@@ -138,33 +137,100 @@ public class EjercicioSueltos {
 
   public static int[] filtraCon7(int n[]) {
 
-    int [] aux = new int [n.length];
-    int [] arraySietes;
+    int[] aux = new int[n.length];
+    int[] arraySietes;
 
     int contador = 0;
 
-    for (int j = 0; j < n.length ; j++){
-      
+    for (int j = 0; j < n.length; j++) {
+
       int num = Ejercicio1_14.posiciondeDigito(n[j], 7);
 
-      if (num == -1){
-        
+      if (num == -1) {
+
       } else {
         aux[contador] = n[j];
         contador++;
       }
     }
 
-    if (contador == 0) arraySietes = new int[] { -1}; 
+    if (contador == 0)
+      arraySietes = new int[] { -1 };
     else {
 
       arraySietes = new int[contador];
-      
+
       for (int i = 0; i < contador; i++) {
         arraySietes[i] = aux[i];
       }
     }
-    
+
     return arraySietes;
+  }
+
+  public static String convierteArrayEnString(int[] n) {
+
+    String cadena = "";
+
+    for (int i = 0; i < n.length; i++) {
+      cadena = cadena + n[i];
+    }
+
+    return cadena;
+
+  }
+
+  public static int[] concatena(int[] n, int[] x) {
+
+    int[] concatenacion = new int[n.length + x.length];
+
+    int contador = 0;
+
+    for (int i = 0; i < n.length; i++) {
+      concatenacion[contador] = n[i];
+      contador++;
+    }
+    for (int i = 0; i < x.length; i++) {
+      concatenacion[contador] = x[i];
+      contador++;
+    }
+
+    return concatenacion;
+
+  }
+
+  public static int[] mezcla(int[] n, int[] x) {
+
+    int[] concatenacion = new int[n.length + x.length];
+
+    int contador1 = 0, contador2 = 0;
+
+    for (int i = 0; i < n.length + x.length; i++)
+
+      if ((i % 2 == 0 && contador1 != n.length) || contador2 == x.length) {
+
+        concatenacion[i] = n[contador1];
+        contador1++;
+
+      } else if ((i % 2 != 0 && contador2 != x.length) || contador1 == n.length) {
+
+        concatenacion[i] = x[contador2];
+        contador2++;
+      }
+
+    return concatenacion;
+
+  }
+
+  public static int aleatorioDeArray(int[] n) {
+
+    int seleccion = 0;
+
+    int num = (int) (Math.random()*n.length);
+
+    seleccion = n[num];
+
+    return seleccion;
+
   }
 }
