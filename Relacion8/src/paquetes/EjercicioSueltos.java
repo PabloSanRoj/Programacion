@@ -233,4 +233,44 @@ public class EjercicioSueltos {
     return seleccion;
 
   }
+
+  public static int nEsimo(int[][] n, int posicion) {
+
+    int seleccion = 0, contador = 0;
+
+    for (int i = 0; i < n.length; i++){
+      for (int j = 0; j < n[i].length; j++){
+        if (contador == posicion){
+          seleccion = n[i][j];
+        }
+        contador++;
+      }
+    }
+
+    return seleccion;
+
+  }
+
+  public static int ocurrencias(int numero, int ocurrencia) {
+
+    int num, contador = 0, cambiar = 0;
+    int posicion = 0;;
+
+      for (int i = numero ; i > 0 ; i /= 10){
+        num = i % 10;
+
+        if (num == ocurrencia){
+          contador++;
+          cambiar = 1;
+        }
+      }
+
+    posicion = contador;
+    if (cambiar == 0){
+      posicion = -1;
+    }
+
+    return posicion;
+
+  }
 }

@@ -1,5 +1,6 @@
 import paquetes.EjercicioSueltos;
 import paquetes.Ejercicio20_28;
+import paquetes.Ejercicio29_34;
 
 public class App4 {
   public static void main(String[] args) throws Exception {
@@ -11,6 +12,7 @@ public class App4 {
     int[] arrayAleatorio = Ejercicio20_28.generaArrayInt(20, 50, 10);
     int[] arrayAleatorio2 = Ejercicio20_28.generaArrayInt(9, 10, 0);
     int[] arrayAleatorio3 = Ejercicio20_28.generaArrayInt(5, 10, 0);
+    int[][] arrayAleatorio4 = Ejercicio29_34.generaArrayBiInt(5, 5, 50, 10);
 
     System.out.println("array: ");
     Ejercicio20_28.muestraArray(arrayAleatorio);
@@ -52,5 +54,12 @@ public class App4 {
     System.out.println("Ejercicio Numeros aleatorios de un array: ");
 
     System.out.println("El numero seleccionado es: " + EjercicioSueltos.aleatorioDeArray(arrayAleatorio));
+
+    System.out.println("Array Bidimensional: ");
+    Ejercicio29_34.muestraArrayBiInt(arrayAleatorio4);
+
+    System.out.println("Ejercicio posicion de un numero en un array Bidimensional: ");
+
+    System.out.println("El numero seleccionado es: " + EjercicioSueltos.nEsimo(arrayAleatorio4, 5));
   }
 }
