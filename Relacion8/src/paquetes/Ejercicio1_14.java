@@ -35,9 +35,9 @@ public class Ejercicio1_14 {
     return numeroDigi;
   }
 
-  public static long potencia(int base, int exponente) {
+  public static int potencia(int base, int exponente) {
 
-    long numero = 1;
+    int numero = 1;
 
     for (int i = 1; i <= exponente; i++) {
       numero = numero * base;
@@ -64,9 +64,9 @@ public class Ejercicio1_14 {
 
   }
 
-  public static long digitoN(long numero, int numQuita) {
+  public static int digitoN(int numero, int numQuita) {
 
-    long num;
+    int num;
     int numdigi;
 
     
@@ -80,13 +80,13 @@ public class Ejercicio1_14 {
     return num;
   }
 
-  public static long quitaPorDelante(long numero, int numQuita) {
+  public static int quitaPorDelante(int numero, int numQuita) {
 
     return numero % potencia(10, digitos(numero) - numQuita);
 
   }
 
-  public static long quitaPorDetras(long numero, int numQuita) {
+  public static int quitaPorDetras(int numero, int numQuita) {
 
     for (long i = numQuita ; i > 0 ; i--){
       numero /= 10;
@@ -96,10 +96,10 @@ public class Ejercicio1_14 {
 
   }
 
-  public static long pegaPorDetras(long numero, long numeroPega) {
+  public static int pegaPorDetras(int numero, int numeroPega) {
 
     int numDigi;
-    long num;
+    int num;
 
     numDigi = digitos(numeroPega);
 
@@ -115,15 +115,15 @@ public class Ejercicio1_14 {
 
   }
 
-  public static long posiciondeDigito(long numero, long ocurrencia) {
+  public static int posiciondeDigito(int numero, int ocurrencia) {
 
     boolean salir = false;
-    long num, contador = 0, cambiar = 0;
-    long posicion = 0;;
+    int num, contador = 0, cambiar = 0;
+    int posicion = 0;;
 
     do{
 
-      for (long i = numero ; i > 0 ; i /= 10){
+      for (int i = numero ; i > 0 ; i /= 10){
         num = i % 10;
 
         if (num == ocurrencia){
@@ -145,9 +145,9 @@ public class Ejercicio1_14 {
 
   }
 
-  public static long trozoDeNumero(long numero) {
+  public static int trozoDeNumero(int numero) {
 
-    long num, num2; 
+    int num, num2; 
     int numDigi;
 
     numDigi = digitos(numero);
@@ -162,10 +162,10 @@ public class Ejercicio1_14 {
 
   }
 
-  public static long juntaNumeros(long numero, long numeroPega) {
+  public static long juntaNumeros(int numero, int numeroPega) {
 
     int numDigi;
-    long num;
+    int num;
 
     numDigi = digitos(numeroPega);
 
@@ -181,7 +181,7 @@ public class Ejercicio1_14 {
 
   }
 
-  public static long pegaPorDelante(long numero, long numeroPega) {
+  public static long pegaPorDelante(int numero, long numeroPega) {
 
     int numDigi;
     long num;

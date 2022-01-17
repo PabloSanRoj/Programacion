@@ -54,59 +54,59 @@ public class App {
             break;
             case 5:
                 System.out.println("Introduzca un numero para ver cuantos digitos tiene: ");
-                long num5 = Long.parseLong(System.console().readLine());
+                int num5 = Integer.parseInt(System.console().readLine());
                 System.out.println(Ejercicio1_14.digitos(num5));
             break;
             case 6:
                 System.out.println("Introduzca un numero para ponerlo al reves: ");
-                long num6 = Long.parseLong(System.console().readLine());
+                int num6 = Integer.parseInt(System.console().readLine());
                 System.out.println(Ejercicio1_14.voltea(num6));
             break;
             case 7:
                 System.out.println("Introduzca un numero y una posicion y te devolvera el digito de esa posicion: ");
-                long num7 = Long.parseLong(System.console().readLine());
+                int num7 = Integer.parseInt(System.console().readLine());
                 int posi = Integer.parseInt(System.console().readLine());
                 System.out.println(Ejercicio1_14.digitoN(num7, posi));
             break;
             case 8:
                 System.out.println("Introduzca un numero y un digito y te devolvera la posicion el la que se encuentra, si no esta devuelve -1: ");
-                long num8 = Long.parseLong(System.console().readLine());
-                long ocu = Long.parseLong(System.console().readLine());
+                int num8 = Integer.parseInt(System.console().readLine());
+                int ocu = Integer.parseInt(System.console().readLine());
                 System.out.println(Ejercicio1_14.posiciondeDigito(num8, ocu));
             break;
             case 9:
                 System.out.println("Introduzca un numero y cuantos digitos quieres quitarle por la izquierda: ");
-                long num9 = Long.parseLong(System.console().readLine());
+                int num9 = Integer.parseInt(System.console().readLine());
                 int quita = Integer.parseInt(System.console().readLine());
                 System.out.println(Ejercicio1_14.quitaPorDelante(num9, quita));
             break;
             case 10:
                 System.out.println("Introduzca un numero y cuantos digitos quieres quitarle por la derecha: ");
-                long num10 = Long.parseLong(System.console().readLine());
+                int num10 = Integer.parseInt(System.console().readLine());
                 int quita2 = Integer.parseInt(System.console().readLine());
                 System.out.println(Ejercicio1_14.quitaPorDetras(num10, quita2));
             break;
             case 11:
                 System.out.println("Introduzca un numero y el digito que quieres pegarle por la derecha: ");
-                long num11 = Long.parseLong(System.console().readLine());
-                long pega = Integer.parseInt(System.console().readLine());
+                int num11 = Integer.parseInt(System.console().readLine());
+                int pega = Integer.parseInt(System.console().readLine());
                 System.out.println(Ejercicio1_14.pegaPorDetras(num11, pega));
             break;
             case 12:
                 System.out.println("Introduzca un numero y el digito que quieres pegarle por la izquierda: ");
-                long num12 = Long.parseLong(System.console().readLine());
-                long pega2 = Integer.parseInt(System.console().readLine());
+                int num12 = Integer.parseInt(System.console().readLine());
+                int pega2 = Integer.parseInt(System.console().readLine());
                 System.out.println(Ejercicio1_14.pegaPorDelante(num12, pega2));
             break;
             case 13:
                 System.out.println("Introduzca un numero y te juntara el primer y ultimo dígito: ");
-                long num13 = Long.parseLong(System.console().readLine());
+                int num13 = Integer.parseInt(System.console().readLine());
                 System.out.println(Ejercicio1_14.trozoDeNumero(num13));
             break;
             case 14:
                 System.out.println("Introduzca 2 numeros y te los juntara: ");
-                long num14 = Long.parseLong(System.console().readLine());
-                long pega3 = Long.parseLong(System.console().readLine());
+                int num14 = Integer.parseInt(System.console().readLine());
+                int pega3 = Integer.parseInt(System.console().readLine());
                 System.out.println(Ejercicio1_14.juntaNumeros(num14, pega3));
             break;
             default:
