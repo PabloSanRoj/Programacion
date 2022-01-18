@@ -273,4 +273,111 @@ public class EjercicioSueltos {
     return posicion;
 
   }
+
+  public static int ocurrencias(int[] numero, int ocurrencia) {
+
+    int num, contador = 0, cambiar = 0;
+    int posicion = 0;;
+
+    for (int j = 0; j < numero.length; j++){
+      for (int i = numero[j] ; i > 0 ; i /= 10){
+        num = i % 10;
+
+        if (num == ocurrencia){
+          contador++;
+          cambiar = 1;
+        }
+      }
+    }
+
+    posicion = contador;
+    if (cambiar == 0){
+      posicion = -1;
+    }
+
+    return posicion;
+
+  }
+
+  public static String[] sinRepetir(String[] s){
+
+    int contador = 1, contador2 = 1;
+
+    
+    String [] palabrasCompara = new String [s.length];
+
+    for (int i = 0; i < s.length; i++){
+      palabrasCompara[i] = s[i];
+    }
+
+    for (int i = 0; i < s.length; i++) {
+      int posicion = 0;
+      if (i == 0) {
+        
+      } else {
+        for (int j = 0; j < i; j++) {
+          if (palabrasCompara[i].equals(s[j]) && j != i) {
+            posicion = 1;
+          }
+        }
+        if (posicion == 0){
+        contador2++;
+        } else {
+
+        }
+      }
+    }
+
+    String [] cadenaSinRepe = new String [contador2];
+
+    for (int i = 0; i < s.length; i++) {
+      int posicion = 0;
+      if (i == 0) {
+        cadenaSinRepe[i] = s[i];
+      } else {
+        for (int j = 0; j < i; j++) {
+          if (palabrasCompara[i].equals(s[j]) && j != i) {
+            posicion = 1;
+          }
+        }
+        if (posicion == 0){
+        cadenaSinRepe[contador] = s[i];
+        contador++;
+        } else {
+
+        }
+      }
+    }
+
+    return cadenaSinRepe;
+  }
+
+  public static int[] corteza(int[][] n){
+
+    int contador = 0;
+
+    int[] cortezaExterior = new int [16];
+
+    for (int i = 0; i < n.length; i++){
+      cortezaExterior[contador] = n[0][i];
+      contador++;
+    }
+
+    for (int i = 1; i < n.length ; i++){
+      cortezaExterior[contador] = n[i][n.length];
+      contador++;
+    }
+
+    for (int i = n.length - 1 ; i >= 0 ; i--){
+      cortezaExterior[contador] = n[n.length][i];
+      contador++;
+    }
+
+    for (int i = n.length - 1; i > 0; i--){
+      cortezaExterior[contador] = n[i][0];
+      contador++;
+    }
+
+    return cortezaExterior;
+  }
 }

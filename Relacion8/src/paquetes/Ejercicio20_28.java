@@ -9,6 +9,13 @@ public class Ejercicio20_28 {
     System.out.println();
   }
 
+  public static void muestraArrayPalabras(String s[]) {
+    for (int i = 0; i < s.length; i++) {
+      System.out.print(s[i] + " ");
+    }
+    System.out.println();
+  }
+
   public static int[] generaArrayInt(int numero, int min, int max) {
 
     int[] arrayGeneral = new int[numero];

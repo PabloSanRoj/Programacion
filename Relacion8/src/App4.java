@@ -12,7 +12,18 @@ public class App4 {
     int[] arrayAleatorio = Ejercicio20_28.generaArrayInt(20, 50, 10);
     int[] arrayAleatorio2 = Ejercicio20_28.generaArrayInt(9, 10, 0);
     int[] arrayAleatorio3 = Ejercicio20_28.generaArrayInt(5, 10, 0);
-    int[][] arrayAleatorio4 = Ejercicio29_34.generaArrayBiInt(5, 5, 50, 10);
+    int[][] arrayAleatorio4 = Ejercicio29_34.generaArrayBiInt(6, 4, 50, 10);
+    String[] arrayPalabras = new String[9];
+
+    arrayPalabras[0] = "casa";
+    arrayPalabras[1] = "coche";
+    arrayPalabras[2] = "sol";
+    arrayPalabras[3] = "mesa";
+    arrayPalabras[4] = "mesa";
+    arrayPalabras[5] = "coche";
+    arrayPalabras[6] = "ordenador";
+    arrayPalabras[7] = "sol";
+    arrayPalabras[8] = "CASA";
 
     System.out.println("array: ");
     Ejercicio20_28.muestraArray(arrayAleatorio);
@@ -61,5 +72,16 @@ public class App4 {
     System.out.println("Ejercicio posicion de un numero en un array Bidimensional: ");
 
     System.out.println("El numero seleccionado es: " + EjercicioSueltos.nEsimo(arrayAleatorio4, 5));
+
+    System.out.println("Ejercicio ocurrencias: ");
+
+    System.out.println("Las veces que se repite el 7 son: " + EjercicioSueltos.ocurrencias(37462846, 7));
+    System.out.println("Las veces que se repite el 7 son: " + EjercicioSueltos.ocurrencias(arrayAleatorio, 7));
+
+    System.out.println("Ejercicio Palabras sin repetir: ");
+    
+    Ejercicio20_28.muestraArrayPalabras(EjercicioSueltos.sinRepetir(arrayPalabras));
+
+    Ejercicio20_28.muestraArray(EjercicioSueltos.corteza(arrayAleatorio4));
   }
 }
