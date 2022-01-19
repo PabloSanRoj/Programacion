@@ -24,15 +24,11 @@ public class PiramideHueca {
       for (int esp = 1; esp <= altura-i; esp++){
         resultado += " ";
       }
-      for (int x = 1; x <= (i*2) - 1 ; x++){
-        if (i == this.altura){
-          resultado += this.caracter;
-        } else {
-        if (x == 1 || x == (i*2) -1){
+      for (int x = 1; x <= (i*2) - 1; x++){
+        if (x == 1 || x == (i*2) -1 || i == this.altura){
           resultado += this.caracter;
         } else {
           resultado += " ";
-        }
         }
       }
       resultado += "\n";
