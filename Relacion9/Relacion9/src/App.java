@@ -9,6 +9,8 @@ public class App {
         System.out.print("Introduzca el caracter de la primera piramide: ");
         String caracter = System.console().readLine();
 
+        System.out.println();
+
         System.out.print("Introduzca la altura de la segunda piramide: ");
         int altura2 = Integer.parseInt(System.console().readLine());
 
@@ -24,6 +26,7 @@ public class App {
         System.out.println();
 
         System.out.print(primeraPiramide.toString());
+        System.out.println();
         System.out.print(segundaPiramide);
     }
 }

@@ -8,12 +8,12 @@ public class PiramideHueca {
     this.altura = a;
     this.caracter = c;
   }
-
+   
   public String Caracter() {
     return this.caracter;
   }
 
-  public int Consealtura(){
+  public int Altura(){
     return this.altura;
   }
 
@@ -22,20 +22,20 @@ public class PiramideHueca {
 
     for (int i = 1 ; i <= this.altura; i++){
       for (int esp = 1; esp <= altura-i; esp++){
-        System.out.print(" ");
+        resultado += " ";
       }
       for (int x = 1; x <= (i*2) - 1 ; x++){
         if (i == this.altura){
-          System.out.print(this.caracter);
+          resultado += this.caracter;
         } else {
         if (x == 1 || x == (i*2) -1){
-          System.out.print(this.caracter);
+          resultado += this.caracter;
         } else {
-          System.out.print(" ");
+          resultado += " ";
         }
         }
       }
-      System.out.println();
+      resultado += "\n";
     }
 
     return resultado;
