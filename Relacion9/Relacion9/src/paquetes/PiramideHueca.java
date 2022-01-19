@@ -4,16 +4,40 @@ public class PiramideHueca {
   int altura;
   String caracter;
 
-  PiramideHueca (String c, int a) {
+  public PiramideHueca (String c, int a) {
     this.altura = a;
     this.caracter = c;
   }
 
-  String Caracter() {
+  public String Caracter() {
     return this.caracter;
   }
 
-  int Consealtura(){
+  public int Consealtura(){
     return this.altura;
+  }
+
+  public String toString(){
+    String resultado = "";
+
+    for (int i = 1 ; i <= this.altura; i++){
+      for (int esp = 1; esp <= altura-i; esp++){
+        System.out.print(" ");
+      }
+      for (int x = 1; x <= (i*2) - 1 ; x++){
+        if (i == this.altura){
+          System.out.print(this.caracter);
+        } else {
+        if (x == 1 || x == (i*2) -1){
+          System.out.print(this.caracter);
+        } else {
+          System.out.print(" ");
+        }
+        }
+      }
+      System.out.println();
+    }
+
+    return resultado;
   }
 }
