@@ -3,7 +3,7 @@ import paquetes.Caballo;
 public class Ejercicio1 {
   public static void main(String[] args) {
 
-    System.out.print("Introduzca el sexo del primer caballo: ");
+    System.out.print("Introduzca el sexo del primer caballo (Macho/Hembra): ");
     String sexo = System.console().readLine();
 
     System.out.print("Introduzca el color del primer caballo: ");
@@ -14,7 +14,7 @@ public class Ejercicio1 {
 
     System.out.println();
 
-    System.out.print("Introduzca el sexo del segundo caballo: ");
+    System.out.print("Introduzca el sexo del segundo caballo (Macho/Hembra): ");
     String sexo2 = System.console().readLine();
 
     System.out.print("Introduzca el color del segundo caballo: ");
@@ -25,7 +25,7 @@ public class Ejercicio1 {
 
     System.out.println();
 
-    System.out.print("Introduzca el sexo del tercer caballo: ");
+    System.out.print("Introduzca el sexo del tercer caballo (Macho/Hembra): ");
     String sexo3 = System.console().readLine();
 
     System.out.print("Introduzca el color del tercer caballo: ");
@@ -38,9 +38,9 @@ public class Ejercicio1 {
     Caballo segundoCaballo;
     Caballo tercerCaballo;
 
-    primerCaballo = new Caballo (sexo, color, manchas);
-    segundoCaballo = new Caballo (sexo2, color2, manchas2);
-    tercerCaballo = new Caballo (sexo3, color3, manchas3);
+    primerCaballo = new Caballo(sexo, color, manchas);
+    segundoCaballo = new Caballo(sexo2, color2, manchas2);
+    tercerCaballo = new Caballo(sexo3, color3, manchas3);
 
     System.out.println();
     System.out.println("Primer Caballo: ");
@@ -52,5 +52,5 @@ public class Ejercicio1 {
     System.out.println("Tercer Caballo: ");
     System.out.print(tercerCaballo.toString());
     System.out.println();
-}
+  }
 }

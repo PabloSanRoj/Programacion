@@ -5,7 +5,7 @@ public class Caballo {
   String color;
   int manchas;
 
-  public Caballo (String s, String c, int m) {
+  public Caballo(String s, String c, int m) {
     this.sexo = s;
     this.color = c;
     this.manchas = m;
@@ -15,22 +15,22 @@ public class Caballo {
     return this.sexo;
   }
 
-  public String color(){
+  public String color() {
     return this.color;
   }
 
-  public int manchas(){
+  public int manchas() {
     return this.manchas;
   }
 
-  public String toString(){
+  public String toString() {
     String resultado = "";
 
     resultado += "Sexo: " + this.sexo + "\n";
     resultado += "Color: " + this.color + "\n";
 
-    if (this.manchas > 0){
-    resultado += "Manchas: " + this.manchas;
+    if (this.manchas > 0) {
+      resultado += "Manchas: " + this.manchas;
     } else {
       resultado += "Manchas: Este caballo no tiene manchas";
     }
