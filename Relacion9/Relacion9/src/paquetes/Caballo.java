@@ -1,26 +1,32 @@
 package paquetes;
 
 public class Caballo {
+
+  public static int numeroKilometros = 0;
+
+  public static int numeroKilometros(){
+    return numeroKilometros;
+  }
+
   String sexo;
   String color;
   int manchas;
+  int carrera;
 
   public Caballo(String s, String c, int m) {
     this.sexo = s;
     this.color = c;
     this.manchas = m;
+    this.carrera = 0;
   }
 
-  public String Sexo() {
-    return this.sexo;
+  public int getcarrera(){
+    return carrera;
   }
 
-  public String color() {
-    return this.color;
-  }
-
-  public int manchas() {
-    return this.manchas;
+  public void Corre(int km) {
+    carrera += km;
+    numeroKilometros += km;
   }
 
   public String toString() {

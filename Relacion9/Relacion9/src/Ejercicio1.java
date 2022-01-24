@@ -42,6 +42,10 @@ public class Ejercicio1 {
     segundoCaballo = new Caballo(sexo2, color2, manchas2);
     tercerCaballo = new Caballo(sexo3, color3, manchas3);
 
+    primerCaballo.Corre(15);
+    segundoCaballo.Corre(8);
+    tercerCaballo.Corre(10);
+
     System.out.println();
     System.out.println("Primer Caballo: ");
     System.out.print(primerCaballo.toString());
@@ -52,5 +56,10 @@ public class Ejercicio1 {
     System.out.println("Tercer Caballo: ");
     System.out.print(tercerCaballo.toString());
     System.out.println();
+
+    System.out.println("El primer caballo ha recorrido: " + primerCaballo.getcarrera() + "Km");
+    System.out.println("El segundo caballo ha recorrido: " + segundoCaballo.getcarrera() + "Km");
+    System.out.println("El tercer caballo ha recorrido: " + tercerCaballo.getcarrera() + "Km");
+    System.out.println("En la carrera se han recorrido: " + Caballo.numeroKilometros() + "km");
   }
 }
