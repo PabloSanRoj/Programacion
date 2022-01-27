@@ -21,30 +21,30 @@ public class Fraccion {
     return muestraFraccion;
   }
 
-  public String Invierte (){
-    String invierteFraccion = "";
+  public void Invierte (){
 
-    invierteFraccion += denominador + "\n";
-    invierteFraccion += "---\n";
-    invierteFraccion += numerador;
+    int aux = this.numerador;
+    this.numerador = this.denominador;
+    this.denominador = aux;
 
-    return invierteFraccion;
   }
 
-  public int multiplica () {
-    int multiplicaFraccion = 0;
+  public void multiplica (Fraccion fraccion2) {
+    int numeradorFraccion = fraccion2.numerador;
+    int denominadorFraccion = fraccion2.denominador;
 
-    multiplicaFraccion = numerador * denominador;
+    this.numerador *= numeradorFraccion;
+    this.denominador *= denominadorFraccion;
 
-    return multiplicaFraccion;
   }
 
-  public float divide () {
-    float divideFraccion = 0;
+  public void divide (Fraccion fraccion2) {
+    int numeradorFraccion = fraccion2.numerador;
+    int denominadorFraccion = fraccion2.denominador;
 
-    divideFraccion = denominador / numerador;
+    this.numerador /= denominadorFraccion;
+    this.denominador /= numeradorFraccion;
 
-    return divideFraccion;
   }
 
   public String simplifica () {
