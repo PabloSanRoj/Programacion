@@ -20,13 +20,13 @@ public class App {
         PiramideHueca primeraPiramide;
         PiramideHueca segundaPiramide;
 
-        primeraPiramide = new PiramideHueca (caracter, altura);
+        /*primeraPiramide = new PiramideHueca (caracter, altura);
         segundaPiramide = new PiramideHueca (caracter2, altura2);
 
         System.out.println();
 
         System.out.print(primeraPiramide.toString());
         System.out.println();
-        System.out.print(segundaPiramide);
+        System.out.print(segundaPiramide);*/
     }
 }

@@ -2,7 +2,7 @@ package paquetes;
 
 public class Vehiculo {
   int vehiculosCreados;
-  int kilometrosTotales;
+  int kilometrosTotales = 0;
 
   public static int kilometrosRecorridos = 0;
 
@@ -10,9 +10,24 @@ public class Vehiculo {
     return kilometrosRecorridos;
   }
 
-  public void Corre(int km) {
-    kilometrosRecorridos += km;
-    kilometrosTotales += km;
+  public int getOpcion (int op){
+    int opcion = op;
+
+    switch (opcion){
+      case 1:
+
+      break;
+      case 2:
+
+      break;
+      case 7:
+        return kilometrosTotales;
+
+      default: return kilometrosTotales;
+
+    }
+    return kilometrosTotales;
   }
+
 }
 
