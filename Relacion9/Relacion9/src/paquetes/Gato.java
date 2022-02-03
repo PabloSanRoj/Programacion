@@ -5,6 +5,12 @@ public class Gato {
   private String color;
   private String raza;
 
+  public Gato(String nombre, String color, String raza) {
+    this.nombre = nombre;
+    this.color = color;
+    this.raza = raza;
+    }
+
   public String getNombre() {
     return nombre;
   }
